@@ -1,5 +1,30 @@
-@()
+@(form: Form[controllers.FormData])(implicit request: MessagesRequestHeader)
+
 
 @main("Welcome to Play") {
   <h1>Welcome to Play!</h1>
+
+
+
+    @helper.form(action = routes.HomeController.upload, 'enctype -> "multipart/form-data") {
+        @helper.inputFile(form("name"))
+        @helper.CSRF.formField
+        <input type="submit" id="upload" value="upload file"/>
+    }
+
+
+  <!--
+  <script type="text/javascript">
+          var svg = dimple.newSvg("body", 800, 600);
+          var data = [
+            { "Word":"Hello", "Awesomeness":2000 },
+            { "Word":"World", "Awesomeness":3000 }
+          ];
+          var chart = new dimple.chart(svg, data);
+          chart.addCategoryAxis("x", "Word");
+          chart.addMeasureAxis("y", "Awesomeness");
+          chart.addSeries(null, dimple.plot.bar);
+          chart.draw();
+  </script>
+  -->
 }
