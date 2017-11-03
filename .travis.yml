@@ -6,4 +6,4 @@ scala:
 
 
 notifications:
-	webhooks: https://hooks.slack.com/services/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
+    webhooks: https://hooks.slack.com/services/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
