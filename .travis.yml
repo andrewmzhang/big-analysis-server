@@ -3,3 +3,7 @@ scala:
     - 2.9.3
     - 2.10.4
     - 2.11.2
+
+
+notifications:
+	webhooks: https://hooks.slack.com/services/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
