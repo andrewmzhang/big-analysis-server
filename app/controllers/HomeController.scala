@@ -5,9 +5,7 @@ import javax.inject._
 import play.api._
 import play.api.data.Form
 import play.api.mvc.MultipartFormData.FilePart
-import play.api.mvc._
 import play.core.parsers.Multipart.FileInfo
-
 import java.io.File
 import java.nio.file.{Files, Path}
 import javax.inject._
@@ -15,13 +13,15 @@ import javax.inject._
 import akka.stream.IOResult
 import akka.stream.scaladsl._
 import akka.util.ByteString
-import play.api._
 import play.api.data.Form
 import play.api.data.Forms._
 import play.api.libs.streams._
+import play.api.mvc.{MessagesAbstractController, MessagesControllerComponents}
 import play.api.mvc.MultipartFormData.FilePart
-import play.api.mvc._
 import play.core.parsers.Multipart.FileInfo
+
+import play.filters.csrf._
+import play.filters.csrf.CSRF.Token
 
 import scala.concurrent.{ExecutionContext, Future}
 
