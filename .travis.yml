@@ -1,6 +1,12 @@
 language: scala
 scala:
-    - 2.9.3
-    - 2.10.4
-    - 2.11.2
-
+- 2.9.3
+- 2.10.4
+- 2.11.2
+deploy:
+  provider: heroku
+  api_key:
+    secure: SwAF+bQYbubDFy5JQPHkZjcb1TSaqQU41TZ3CN3YlOKKInfOI+lvFXsiK7E8qPMPvhXTbqHQjhAr4zrfcXF1ttC1XBy1JMpW+cf/75R332/1R6e4ClYZHbds/e8Aw8S6TAzgZhRr2V7K+CLqUUh6bHycrwSl7eFY6dPDHIpmI2D/TTbQObYVfAKNCyfvUaSRXmalS6NwOYosNno4CZicFOzng3nfnsiXIvggMucQqlFjKgTIBSgknwaN0LJ7cNsdzyYEb34YSEjuC/NAKw7N9lpPH4IrNlM3gv3jU3c8doyu8kkvmwUgn4wf2o2Uc0dnLn3qb4/J8jiY2gTqBv2iwmA4wtnXbPkeNkGJdah1XxGMRDGKxbI7sQoGcDNbMdt/+NJpKBy/hSuTMsJX+WNzirQK7q9n1kokS1to8DDs4Ae3MzBbXiiaIFbsZ+VikIQn9GxeEXNnHi046MjmmyzAYR0LHtJ0miy4XdueEWpng5SMJrXtpFNfaKrUR2oAejpXlRmNkBe57r+zPS11IE/MdKHViy6M2X/T2fTu9EQPFF1ENNSd59NLgjgr+uwZlSDXsA7MqEg3hNu+3oAzKF6CGp37ZCjRLXy6tD4zq4NkTPqfXMKTHqGRuAhFqVXogqhZKgY/sPMEiVS2klz/MxLFnjpUcr9yRl1dFTFjnbnTssk=
+  app: big-analysis-server
+  on:
+    repo: andrewmzhang/big-analysis-server
